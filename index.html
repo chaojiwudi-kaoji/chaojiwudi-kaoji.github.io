@@ -1,0 +1,349 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>绿野仙踪 · 新媒体创作项目成果展示 | 陈佳怡</title>
+<meta name="description" content="《绿野仙踪》新媒体创作项目成果展示 —— 成片视频、剧本与字幕、AI 素材图库。制作：陈佳怡。">
+<meta name="theme-color" content="#E7F2DC">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 入场遮罩：进入网页时纸张洇开 -->
+<div class="intro" aria-hidden="true"></div>
+
+<!-- ============================================================
+     SVG 装饰库（手绘水彩绿植 / 邮戳 / 茶具 / 旧书 / 线描花）
+     ★ 修改装饰图形：改这一个 <svg> 块，四个页面共用同一套定义
+     ============================================================ -->
+<svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <!-- 渐变 -->
+    <linearGradient id="gLeaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#AED88A"/><stop offset="52%" stop-color="#7CB356"/><stop offset="100%" stop-color="#568F3A"/>
+    </linearGradient>
+    <linearGradient id="gLeaf2" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8FC064"/><stop offset="100%" stop-color="#4A7C36"/>
+    </linearGradient>
+    <linearGradient id="gTea" x1="0" y1="0" x2=".4" y2="1">
+      <stop offset="0%" stop-color="#A9D287"/><stop offset="45%" stop-color="#78B053"/><stop offset="100%" stop-color="#3F7030"/>
+    </linearGradient>
+    <linearGradient id="gGreen" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8FC064"/><stop offset="100%" stop-color="#5E9C3E"/>
+    </linearGradient>
+
+    <!-- 撕边毛边滤镜（4 组不同种子，让每张纸边缘都不一样） -->
+    <filter id="tornEdge" x="-12%" y="-18%" width="124%" height="136%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.020 0.040" numOctaves="5" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="tornEdge2" x="-12%" y="-18%" width="124%" height="136%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.024 0.048" numOctaves="5" seed="27" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="tornEdge3" x="-14%" y="-20%" width="128%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.030 0.055" numOctaves="4" seed="43" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="tornEdge4" x="-4%" y="-40%" width="108%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.090" numOctaves="4" seed="59" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <!-- 单片叶子 -->
+    <g id="leafR">
+      <path d="M0 0 C 9 -11, 26 -14, 36 -3 C 25 8, 8 10, 0 0 Z" fill="url(#gLeaf)"/>
+      <path d="M3 -1 C 13 -3, 25 -6, 34 -4" stroke="#456F32" stroke-width="1.1" fill="none" opacity=".62"/>
+      <path d="M13 -5 L10 0 M19 -6 L16 -2 M25 -6 L23 -3" stroke="#456F32" stroke-width=".75" opacity=".45"/>
+    </g>
+    <g id="leafL">
+      <path d="M0 0 C -9 -11, -26 -14, -36 -3 C -25 8, -8 10, 0 0 Z" fill="url(#gLeaf2)"/>
+      <path d="M-3 -1 C -13 -3, -25 -6, -34 -4" stroke="#456F32" stroke-width="1.1" fill="none" opacity=".62"/>
+    </g>
+
+    <!-- 藤蔓簇（从纸张边角爬出） -->
+    <g id="vineSpray">
+      <path d="M4 104 C 12 72, 28 44, 56 22 C 74 8, 92 2, 110 3" fill="none" stroke="#5E9C3E" stroke-width="2.3" stroke-linecap="round"/>
+      <path d="M34 60 C 46 58, 60 62, 68 70" fill="none" stroke="#5E9C3E" stroke-width="1.6" stroke-linecap="round"/>
+      <use href="#leafR" transform="translate(14,78) rotate(-54) scale(.82)"/>
+      <use href="#leafR" transform="translate(27,56) rotate(-40) scale(.92)"/>
+      <use href="#leafR" transform="translate(43,37) rotate(-26) scale(1)"/>
+      <use href="#leafR" transform="translate(62,22) rotate(-14) scale(.9)"/>
+      <use href="#leafR" transform="translate(86,11) rotate(-5) scale(.78)"/>
+      <use href="#leafL" transform="translate(24,86) rotate(28) scale(.76)"/>
+      <use href="#leafL" transform="translate(38,66) rotate(16) scale(.84)"/>
+      <use href="#leafL" transform="translate(66,70) rotate(34) scale(.7)"/>
+      <circle cx="52" cy="46" r="3.2" fill="#CFE7B4"/>
+      <circle cx="79" cy="30" r="2.6" fill="#CFE7B4"/>
+    </g>
+
+    <!-- 横向藤蔓边饰 -->
+    <g id="vineH">
+      <path d="M4 26 C 56 6, 116 42, 172 20 C 224 2, 282 30, 336 14 C 388 0, 442 24, 496 10" fill="none" stroke="#6FA84A" stroke-width="2" stroke-linecap="round" opacity=".92"/>
+      <use href="#leafR" transform="translate(40,18) rotate(-30) scale(.6)"/>
+      <use href="#leafL" transform="translate(84,26) rotate(34) scale(.55)"/>
+      <use href="#leafR" transform="translate(140,16) rotate(-22) scale(.62)"/>
+      <use href="#leafL" transform="translate(196,26) rotate(30) scale(.52)"/>
+      <use href="#leafR" transform="translate(248,14) rotate(-26) scale(.6)"/>
+      <use href="#leafL" transform="translate(304,24) rotate(32) scale(.56)"/>
+      <use href="#leafR" transform="translate(366,12) rotate(-20) scale(.58)"/>
+      <use href="#leafL" transform="translate(428,22) rotate(28) scale(.5)"/>
+      <circle cx="112" cy="30" r="3.4" fill="#CFE7B4"/>
+      <circle cx="272" cy="16" r="3" fill="#CFE7B4"/>
+      <circle cx="396" cy="20" r="3.2" fill="#CFE7B4"/>
+    </g>
+
+    <!-- 小雏菊 / 干花 -->
+    <g id="daisy">
+      <g fill="#FDFCF6" stroke="#B7CE9C" stroke-width="1">
+        <ellipse cx="0" cy="-9" rx="3.6" ry="7"/>
+        <ellipse cx="0" cy="9" rx="3.6" ry="7"/>
+        <ellipse cx="-9" cy="0" rx="7" ry="3.6"/>
+        <ellipse cx="9" cy="0" rx="7" ry="3.6"/>
+        <ellipse cx="-6.4" cy="-6.4" rx="3.2" ry="6.2" transform="rotate(-45 -6.4 -6.4)"/>
+        <ellipse cx="6.4" cy="6.4" rx="3.2" ry="6.2" transform="rotate(-45 6.4 6.4)"/>
+        <ellipse cx="-6.4" cy="6.4" rx="3.2" ry="6.2" transform="rotate(45 -6.4 6.4)"/>
+        <ellipse cx="6.4" cy="-6.4" rx="3.2" ry="6.2" transform="rotate(45 6.4 -6.4)"/>
+      </g>
+      <circle cx="0" cy="0" r="3.4" fill="#E8C25C"/>
+    </g>
+
+    <!-- 复古邮戳 -->
+    <g id="stampOZ">
+      <circle cx="62" cy="62" r="55" fill="none" stroke="#9C9078" stroke-width="1.7" opacity=".85"/>
+      <circle cx="62" cy="62" r="47" fill="none" stroke="#9C9078" stroke-width="1" opacity=".72" stroke-dasharray="2.5 4"/>
+      <path d="M62 30 L75 54 L49 54 Z" fill="none" stroke="#9C9078" stroke-width="1.5" opacity=".9"/>
+      <path d="M62 30 L62 21" stroke="#9C9078" stroke-width="1.3" opacity=".9"/>
+      <path d="M52 54 L72 54" stroke="#9C9078" stroke-width="1.3" opacity=".9"/>
+      <text x="62" y="76" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="2" fill="#9C9078" opacity=".95">OZ</text>
+      <text x="62" y="90" text-anchor="middle" font-family="Georgia,serif" font-size="7.5" letter-spacing="1.2" fill="#9C9078" opacity=".85">1900 · EMERALD CITY</text>
+    </g>
+
+    <!-- 绿茶壶（水彩） -->
+    <g id="teapot">
+      <path d="M36 66 C 36 42, 58 27, 86 27 C 114 27, 136 42, 136 66 C 136 88, 114 100, 86 100 C 58 100, 36 88, 36 66 Z" fill="url(#gTea)"/>
+      <path d="M64 27 C 64 17, 108 17, 108 27 Z" fill="#4E8440"/>
+      <circle cx="86" cy="15" r="6.4" fill="#3F7030"/>
+      <path d="M136 56 C 156 50, 163 64, 153 77 L 138 82" fill="none" stroke="#4E8440" stroke-width="7.5" stroke-linecap="round"/>
+      <path d="M37 48 C 15 48, 10 78, 33 83" fill="none" stroke="#4E8440" stroke-width="7.5" stroke-linecap="round"/>
+      <path d="M54 46 C 63 37, 78 34, 91 37" fill="none" stroke="#D6EBC0" stroke-width="4.5" opacity=".72" stroke-linecap="round"/>
+      <path d="M116 88 C 130 92, 142 100, 148 110" fill="none" stroke="#4E8440" stroke-width="1.6" opacity=".5"/>
+      <use href="#leafL" transform="translate(146,108) rotate(-30) scale(.55)"/>
+    </g>
+
+    <!-- 茶杯 -->
+    <g id="cup">
+      <path d="M12 32 L16 68 C 17 77, 25 82, 36 82 C 47 82, 55 77, 56 68 L 60 32 Z" fill="url(#gTea)"/>
+      <ellipse cx="36" cy="32" rx="24" ry="6.4" fill="#F1F8E9" stroke="#4E8440" stroke-width="1.6"/>
+      <path d="M60 40 C 76 40, 78 62, 58 66" fill="none" stroke="#4E8440" stroke-width="5.4" stroke-linecap="round"/>
+      <path d="M24 24 C 24 15, 32 13, 32 4" stroke="#BAD89C" stroke-width="2.4" fill="none" stroke-linecap="round" opacity=".75"/>
+      <path d="M44 24 C 44 17, 50 15, 50 8" stroke="#BAD89C" stroke-width="2" fill="none" stroke-linecap="round" opacity=".6"/>
+    </g>
+
+    <!-- 旧书 -->
+    <g id="book">
+      <path d="M4 20 L66 8 L66 62 L4 74 Z" fill="#5E9C3E"/>
+      <path d="M66 8 L106 20 L106 74 L66 62 Z" fill="#4E8440"/>
+      <path d="M70 12 L102 20 L102 70 L70 60 Z" fill="#F7F2E3"/>
+      <path d="M75 20 L97 25 M75 30 L97 35 M75 40 L97 45" stroke="#CFE7B4" stroke-width="1.7"/>
+      <path d="M9 24 L61 14 M9 34 L61 24" stroke="#A8D283" stroke-width="1.5" opacity=".55"/>
+      <use href="#leafR" transform="translate(30,10) rotate(-40) scale(.7)"/>
+      <use href="#leafL" transform="translate(10,58) rotate(24) scale(.6)"/>
+    </g>
+
+    <!-- 白鸽 -->
+    <g id="dove">
+      <path d="M2 22 C 14 9, 36 5, 50 12 C 58 4, 72 1, 84 8 C 77 12, 72 17, 70 23 C 57 31, 30 33, 18 28 Z" fill="#FDFCF7"/>
+      <path d="M50 12 C 44 5, 42 1, 47 -2 C 51 3, 56 8, 61 10 Z" fill="#FDFCF7"/>
+      <path d="M20 28 C 34 32, 56 30, 68 24" stroke="#C9DDB4" stroke-width="1.2" fill="none"/>
+      <circle cx="79" cy="10" r="1.5" fill="#5E9C3E"/>
+    </g>
+
+    <!-- 蝴蝶 -->
+    <g id="butterfly">
+      <path d="M16 18 C 3 3, -8 10, 1 20 C -8 29, 3 36, 16 22 Z" fill="#BAD89C"/>
+      <path d="M18 18 C 31 3, 42 10, 33 20 C 42 29, 31 36, 18 22 Z" fill="#A8D283"/>
+      <ellipse cx="17" cy="20" rx="1.7" ry="7.4" fill="#3F7030"/>
+      <path d="M17 13 C 14 5, 10 2, 7 1 M17 13 C 20 5, 24 2, 27 1" stroke="#3F7030" stroke-width="1" fill="none"/>
+    </g>
+
+    <!-- 信封 -->
+    <g id="envelope">
+      <rect x="2" y="8" width="78" height="54" rx="3" fill="#FBF7EC" stroke="#C7BC9C" stroke-width="1.5"/>
+      <path d="M2 12 L41 38 L80 12" fill="none" stroke="#C7BC9C" stroke-width="1.5"/>
+      <path d="M2 60 L31 36 M80 60 L51 36" fill="none" stroke="#DED5B9" stroke-width="1.2"/>
+    </g>
+
+    <!-- 线描花朵水印（大） -->
+    <g id="lineFlower" fill="none" stroke="#8FC064" stroke-width="1.5" opacity=".6">
+      <path d="M210 148 C 184 118, 188 78, 210 58 C 232 78, 236 118, 210 148 Z"/>
+      <path d="M210 58 C 210 128, 210 172, 210 214"/>
+      <path d="M210 148 C 172 138, 146 116, 136 86"/>
+      <path d="M210 148 C 248 138, 274 116, 284 86"/>
+      <path d="M210 214 C 188 230, 174 250, 170 272"/>
+      <path d="M210 214 C 232 230, 246 250, 250 272"/>
+      <path d="M210 100 C 196 92, 186 92, 178 96"/>
+      <path d="M210 100 C 224 92, 234 92, 242 96"/>
+      <circle cx="210" cy="152" r="7"/>
+    </g>
+
+    <!-- 播放按钮 -->
+    <g id="playBtn">
+      <circle cx="60" cy="60" r="56" fill="rgba(253,252,247,.94)"/>
+      <circle cx="60" cy="60" r="49" fill="none" stroke="#5E9C3E" stroke-width="2" opacity=".5" stroke-dasharray="4 5"/>
+      <path d="M50 38 L86 60 L50 82 Z" fill="#5E9C3E"/>
+    </g>
+
+    <!-- 入口卡图标 -->
+    <g id="icoFilm">
+      <rect x="6" y="15" width="56" height="40" rx="4" fill="#F7F2E3" stroke="#5E9C3E" stroke-width="2.6"/>
+      <path d="M26 25 L45 35 L26 45 Z" fill="#7CB356"/>
+      <path d="M6 23 L16 23 M6 47 L16 47 M52 23 L62 23 M52 47 L62 47" stroke="#8FC064" stroke-width="2.4" stroke-linecap="round"/>
+    </g>
+    <g id="icoQuill">
+      <path d="M12 54 C 21 29, 39 13, 60 7 C 54 26, 41 43, 27 52 Z" fill="#A8D283" stroke="#4E8440" stroke-width="1.6"/>
+      <path d="M60 7 C 44 20, 30 36, 20 50" stroke="#4E8440" stroke-width="1.2" fill="none"/>
+      <path d="M5 60 L15 50" stroke="#8A7550" stroke-width="3.2" stroke-linecap="round"/>
+    </g>
+    <g id="icoFrame">
+      <rect x="7" y="13" width="52" height="44" rx="3" fill="#FDFCF7" stroke="#5E9C3E" stroke-width="2.6"/>
+      <path d="M14 48 L27 33 L35 43 L44 35 L53 48 Z" fill="#A8D283"/>
+      <circle cx="24" cy="25" r="4" fill="#E8C25C"/>
+    </g>
+
+    <!-- 箭头 -->
+    <g id="chev"><path d="M5 4 L13 12 L5 20" fill="none" stroke="#5E9C3E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="chevD"><path d="M3 6 L11 15 L19 6" fill="none" stroke="#5E9C3E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="cross"><path d="M4 4 L16 16 M16 4 L4 16" stroke="#5E9C3E" stroke-width="2.8" stroke-linecap="round"/></g>
+    <g id="arrL"><path d="M13 4 L5 12 L13 20" fill="none" stroke="#5E9C3E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+
+    <!-- 飘落小叶片 -->
+    <g id="tinyLeaf"><path d="M0 0 C 6 -8, 18 -10, 24 -2 C 16 6, 6 8, 0 0 Z" fill="#8FC064" opacity=".85"/></g>
+
+    <!-- 手绘波浪分隔线 -->
+    <g id="waveRule"><path d="M6 8 C 60 2, 120 12, 170 6 S 270 3, 334 8" fill="none" stroke="#8FC064" stroke-width="2.2" stroke-linecap="round"/></g>
+  </defs>
+</svg>
+
+<!-- ============================================================
+     常驻导航（切页时高亮）
+     ============================================================ -->
+<nav class="topnav">
+  <a class="brand" href="index.html">
+    <svg class="brand__leaf" viewBox="0 0 40 40" aria-hidden="true">
+      <use href="#leafR" transform="translate(2,24) rotate(-34) scale(.62)"/>
+      <use href="#leafL" transform="translate(38,22) rotate(26) scale(.56)"/>
+      <path d="M20 38 L20 12" stroke="#5E9C3E" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <span>
+      <span class="brand__txt">绿野仙踪</span>
+      <span class="brand__en">THE WIZARD OF OZ</span>
+    </span>
+  </a>
+  <div class="navlinks">
+    <a class="navlink is-active" href="index.html">首页封面</a>
+    <a class="navlink" href="video.html">成片视频</a>
+    <a class="navlink" href="script.html">剧本与字幕</a>
+    <a class="navlink" href="gallery.html">AI素材图库</a>
+  </div>
+  <span class="navdeco" aria-hidden="true">
+    <svg viewBox="0 0 100 40"><use href="#vineH" transform="scale(.2)"/></svg>
+  </span>
+</nav>
+
+<!-- 飘落叶片粒子层（由 JS 生成粒子） -->
+<div class="drift" id="drift" aria-hidden="true"></div>
+
+<main class="page" id="page">
+
+  <!-- ========================================================
+       首页封面
+       ======================================================== -->
+  <section class="cover">
+
+    <!-- 装饰藤蔓（入场逐步浮现） -->
+    <div class="cover__vines" aria-hidden="true">
+      <svg class="v-left"  viewBox="0 0 130 120"><use href="#vineSpray" transform="scale(1.06)"/></svg>
+      <svg class="v-right" viewBox="0 0 130 120"><use href="#vineSpray" transform="scale(-1.06,1.06) translate(-118,0)"/></svg>
+      <svg class="v-bottom" viewBox="0 0 500 36"><use href="#vineH"/></svg>
+    </div>
+
+    <!-- ---- 撕边水彩主纸 ---- -->
+    <article class="paper cover__hero">
+      <svg class="watermark" viewBox="0 0 420 300" aria-hidden="true"><use href="#lineFlower"/></svg>
+
+      <!-- 复古邮戳（压印入场） -->
+      <svg class="stamp cover__stamp" viewBox="0 0 124 124" aria-hidden="true"><use href="#stampOZ"/></svg>
+
+      <!-- 手绘装饰：蝴蝶 / 白鸽 -->
+      <svg class="deco" style="right:9%;top:52px;width:44px;" viewBox="0 0 44 40" aria-hidden="true"><use href="#butterfly"/></svg>
+      <svg class="deco" style="left:12%;top:118px;width:74px;opacity:.92" viewBox="0 0 88 34" aria-hidden="true"><use href="#dove"/></svg>
+
+      <!-- ★ 主标题区（修改文字：改这三处） -->
+      <h1 class="cover__hero-title" style="margin:0;">
+        <span class="cover__en">The Wizard of OZ</span>
+        <span class="cover__cn">绿野仙踪</span>
+      </h1>
+      <p class="cover__sub">新 媒 体 创 作 项 目 成 果 展 示</p>
+      <div class="cover__rule" aria-hidden="true"></div>
+
+      <!-- 手绘插画：茶具（右下）/ 旧书（左下） -->
+      <svg class="cover__teapot" viewBox="0 0 170 130" aria-hidden="true">
+        <use href="#teapot" transform="translate(0,-8) scale(.9)"/>
+        <use href="#cup" transform="translate(98,38) scale(.78)"/>
+      </svg>
+      <svg class="cover__book" viewBox="0 0 120 84" aria-hidden="true"><use href="#book"/></svg>
+    </article>
+
+    <!-- ---- 三张错落便签入口卡（★ 修改入口文字 / 跳转链接改 href）---- -->
+    <div class="entries">
+      <div class="entry-slot">
+        <a class="entry-card" href="video.html">
+          <span class="tape tape--tc" aria-hidden="true"></span>
+          <svg class="entry-card__icon" viewBox="0 0 68 70" aria-hidden="true"><use href="#icoFilm"/></svg>
+          <span class="entry-card__t">成片视频</span>
+          <span class="entry-card__en">FILM</span>
+          <span class="entry-card__d">完整成片 · 一支两分钟的<br>童话成长寓言</span>
+          <span class="entry-card__go">进入观看 <svg viewBox="0 0 18 24"><use href="#chev"/></svg></span>
+        </a>
+      </div>
+      <div class="entry-slot">
+        <a class="entry-card" href="script.html">
+          <span class="tape tape--tc" aria-hidden="true"></span>
+          <svg class="entry-card__icon" viewBox="0 0 68 70" aria-hidden="true"><use href="#icoQuill"/></svg>
+          <span class="entry-card__t">剧本与字幕</span>
+          <span class="entry-card__en">SCRIPT</span>
+          <span class="entry-card__d">八个分镜头 · 逐句字幕<br>与配音节奏标注</span>
+          <span class="entry-card__go">进入阅读 <svg viewBox="0 0 18 24"><use href="#chev"/></svg></span>
+        </a>
+      </div>
+      <div class="entry-slot">
+        <a class="entry-card" href="gallery.html">
+          <span class="tape tape--tc" aria-hidden="true"></span>
+          <svg class="entry-card__icon" viewBox="0 0 68 70" aria-hidden="true"><use href="#icoFrame"/></svg>
+          <span class="entry-card__t">AI素材图库</span>
+          <span class="entry-card__en">GALLERY</span>
+          <span class="entry-card__d">九张水彩概念图<br>提示词与画面说明</span>
+          <span class="entry-card__go">进入浏览 <svg viewBox="0 0 18 24"><use href="#chev"/></svg></span>
+        </a>
+      </div>
+    </div>
+
+    <!-- ---- 首页页脚纸条 ---- -->
+    <div class="paper paper--tight foot-note">
+      <p>世界名著《绿野仙踪》新媒体创作项目 —— 以「稻草人要大脑、铁皮人要心脏、狮子要勇气，而你缺什么？」为主线，
+      完成一支完整的讲解短片：从标题策划、字幕脚本、分镜提示词，到 AI 素材生成、视频合成与网页呈现。</p>
+      <p class="muted small" style="margin-top:10px;">课程作业 · 纯静态网页成果集 · 制作：<span style="color:#3F7030;">陈佳怡</span></p>
+      <svg style="display:block;width:min(300px,70%);height:14px;margin:14px auto 0;opacity:.85;" viewBox="0 0 340 14" aria-hidden="true"><use href="#waveRule"/></svg>
+    </div>
+  </section>
+</main>
+
+<!-- 右下角固定署名（★ 修改署名文字：改这里） -->
+<div class="signature">项目制作：<span class="signature__name">陈佳怡</span></div>
+<div class="footsign">绿野仙踪 · 新媒体创作项目成果展示 &nbsp;|&nbsp; 制作：<span>陈佳怡</span></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

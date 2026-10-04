@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>成片视频 · 绿野仙踪 | 陈佳怡</title>
+<meta name="description" content="《绿野仙踪》新媒体创作项目成片视频 —— 完整短片与项目简介。制作：陈佳怡。">
+<meta name="theme-color" content="#E7F2DC">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 入场遮罩：进入网页时纸张洇开 -->
+<div class="intro" aria-hidden="true"></div>
+
+<!-- SVG 装饰库（与首页一致） -->
+<svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="gLeaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#AED88A"/><stop offset="52%" stop-color="#7CB356"/><stop offset="100%" stop-color="#568F3A"/>
+    </linearGradient>
+    <linearGradient id="gLeaf2" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8FC064"/><stop offset="100%" stop-color="#4A7C36"/>
+    </linearGradient>
+    <linearGradient id="gTea" x1="0" y1="0" x2=".4" y2="1">
+      <stop offset="0%" stop-color="#A9D287"/><stop offset="45%" stop-color="#78B053"/><stop offset="100%" stop-color="#3F7030"/>
+    </linearGradient>
+
+    <filter id="tornEdge" x="-12%" y="-18%" width="124%" height="136%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.020 0.040" numOctaves="5" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="tornEdge2" x="-12%" y="-18%" width="124%" height="136%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.024 0.048" numOctaves="5" seed="27" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="tornEdge3" x="-14%" y="-20%" width="128%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.030 0.055" numOctaves="4" seed="43" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="tornEdge4" x="-4%" y="-40%" width="108%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.090" numOctaves="4" seed="59" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <g id="leafR">
+      <path d="M0 0 C 9 -11, 26 -14, 36 -3 C 25 8, 8 10, 0 0 Z" fill="url(#gLeaf)"/>
+      <path d="M3 -1 C 13 -3, 25 -6, 34 -4" stroke="#456F32" stroke-width="1.1" fill="none" opacity=".62"/>
+      <path d="M13 -5 L10 0 M19 -6 L16 -2 M25 -6 L23 -3" stroke="#456F32" stroke-width=".75" opacity=".45"/>
+    </g>
+    <g id="leafL">
+      <path d="M0 0 C -9 -11, -26 -14, -36 -3 C -25 8, -8 10, 0 0 Z" fill="url(#gLeaf2)"/>
+      <path d="M-3 -1 C -13 -3, -25 -6, -34 -4" stroke="#456F32" stroke-width="1.1" fill="none" opacity=".62"/>
+    </g>
+    <g id="vineSpray">
+      <path d="M4 104 C 12 72, 28 44, 56 22 C 74 8, 92 2, 110 3" fill="none" stroke="#5E9C3E" stroke-width="2.3" stroke-linecap="round"/>
+      <path d="M34 60 C 46 58, 60 62, 68 70" fill="none" stroke="#5E9C3E" stroke-width="1.6" stroke-linecap="round"/>
+      <use href="#leafR" transform="translate(14,78) rotate(-54) scale(.82)"/>
+      <use href="#leafR" transform="translate(27,56) rotate(-40) scale(.92)"/>
+      <use href="#leafR" transform="translate(43,37) rotate(-26) scale(1)"/>
+      <use href="#leafR" transform="translate(62,22) rotate(-14) scale(.9)"/>
+      <use href="#leafR" transform="translate(86,11) rotate(-5) scale(.78)"/>
+      <use href="#leafL" transform="translate(24,86) rotate(28) scale(.76)"/>
+      <use href="#leafL" transform="translate(38,66) rotate(16) scale(.84)"/>
+      <use href="#leafL" transform="translate(66,70) rotate(34) scale(.7)"/>
+      <circle cx="52" cy="46" r="3.2" fill="#CFE7B4"/>
+      <circle cx="79" cy="30" r="2.6" fill="#CFE7B4"/>
+    </g>
+    <g id="vineH">
+      <path d="M4 26 C 56 6, 116 42, 172 20 C 224 2, 282 30, 336 14 C 388 0, 442 24, 496 10" fill="none" stroke="#6FA84A" stroke-width="2" stroke-linecap="round" opacity=".92"/>
+      <use href="#leafR" transform="translate(40,18) rotate(-30) scale(.6)"/>
+      <use href="#leafL" transform="translate(84,26) rotate(34) scale(.55)"/>
+      <use href="#leafR" transform="translate(140,16) rotate(-22) scale(.62)"/>
+      <use href="#leafL" transform="translate(196,26) rotate(30) scale(.52)"/>
+      <use href="#leafR" transform="translate(248,14) rotate(-26) scale(.6)"/>
+      <use href="#leafL" transform="translate(304,24) rotate(32) scale(.56)"/>
+      <use href="#leafR" transform="translate(366,12) rotate(-20) scale(.58)"/>
+      <use href="#leafL" transform="translate(428,22) rotate(28) scale(.5)"/>
+      <circle cx="112" cy="30" r="3.4" fill="#CFE7B4"/>
+      <circle cx="272" cy="16" r="3" fill="#CFE7B4"/>
+      <circle cx="396" cy="20" r="3.2" fill="#CFE7B4"/>
+    </g>
+    <g id="daisy">
+      <g fill="#FDFCF6" stroke="#B7CE9C" stroke-width="1">
+        <ellipse cx="0" cy="-9" rx="3.6" ry="7"/><ellipse cx="0" cy="9" rx="3.6" ry="7"/>
+        <ellipse cx="-9" cy="0" rx="7" ry="3.6"/><ellipse cx="9" cy="0" rx="7" ry="3.6"/>
+        <ellipse cx="-6.4" cy="-6.4" rx="3.2" ry="6.2" transform="rotate(-45 -6.4 -6.4)"/>
+        <ellipse cx="6.4" cy="6.4" rx="3.2" ry="6.2" transform="rotate(-45 6.4 6.4)"/>
+        <ellipse cx="-6.4" cy="6.4" rx="3.2" ry="6.2" transform="rotate(45 -6.4 6.4)"/>
+        <ellipse cx="6.4" cy="-6.4" rx="3.2" ry="6.2" transform="rotate(45 6.4 -6.4)"/>
+      </g>
+      <circle cx="0" cy="0" r="3.4" fill="#E8C25C"/>
+    </g>
+    <g id="stampOZ">
+      <circle cx="62" cy="62" r="55" fill="none" stroke="#9C9078" stroke-width="1.7" opacity=".85"/>
+      <circle cx="62" cy="62" r="47" fill="none" stroke="#9C9078" stroke-width="1" opacity=".72" stroke-dasharray="2.5 4"/>
+      <path d="M62 30 L75 54 L49 54 Z" fill="none" stroke="#9C9078" stroke-width="1.5" opacity=".9"/>
+      <path d="M62 30 L62 21" stroke="#9C9078" stroke-width="1.3" opacity=".9"/>
+      <path d="M52 54 L72 54" stroke="#9C9078" stroke-width="1.3" opacity=".9"/>
+      <text x="62" y="76" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="2" fill="#9C9078" opacity=".95">OZ</text>
+      <text x="62" y="90" text-anchor="middle" font-family="Georgia,serif" font-size="7.5" letter-spacing="1.2" fill="#9C9078" opacity=".85">1900 · EMERALD CITY</text>
+    </g>
+    <g id="book">
+      <path d="M4 20 L66 8 L66 62 L4 74 Z" fill="#5E9C3E"/>
+      <path d="M66 8 L106 20 L106 74 L66 62 Z" fill="#4E8440"/>
+      <path d="M70 12 L102 20 L102 70 L70 60 Z" fill="#F7F2E3"/>
+      <path d="M75 20 L97 25 M75 30 L97 35 M75 40 L97 45" stroke="#CFE7B4" stroke-width="1.7"/>
+      <use href="#leafR" transform="translate(30,10) rotate(-40) scale(.7)"/>
+    </g>
+    <g id="butterfly">
+      <path d="M16 18 C 3 3, -8 10, 1 20 C -8 29, 3 36, 16 22 Z" fill="#BAD89C"/>
+      <path d="M18 18 C 31 3, 42 10, 33 20 C 42 29, 31 36, 18 22 Z" fill="#A8D283"/>
+      <ellipse cx="17" cy="20" rx="1.7" ry="7.4" fill="#3F7030"/>
+      <path d="M17 13 C 14 5, 10 2, 7 1 M17 13 C 20 5, 24 2, 27 1" stroke="#3F7030" stroke-width="1" fill="none"/>
+    </g>
+    <g id="playBtn">
+      <circle cx="60" cy="60" r="56" fill="rgba(253,252,247,.94)"/>
+      <circle cx="60" cy="60" r="49" fill="none" stroke="#5E9C3E" stroke-width="2" opacity=".5" stroke-dasharray="4 5"/>
+      <path d="M50 38 L86 60 L50 82 Z" fill="#5E9C3E"/>
+    </g>
+    <g id="chev"><path d="M5 4 L13 12 L5 20" fill="none" stroke="#5E9C3E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="chevD"><path d="M3 6 L11 15 L19 6" fill="none" stroke="#5E9C3E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="waveRule"><path d="M6 8 C 60 2, 120 12, 170 6 S 270 3, 334 8" fill="none" stroke="#8FC064" stroke-width="2.2" stroke-linecap="round"/></g>
+    <g id="tinyLeaf"><path d="M0 0 C 6 -8, 18 -10, 24 -2 C 16 6, 6 8, 0 0 Z" fill="#8FC064" opacity=".85"/></g>
+  </defs>
+</svg>
+
+<!-- 常驻导航 -->
+<nav class="topnav">
+  <a class="brand" href="index.html">
+    <svg class="brand__leaf" viewBox="0 0 40 40" aria-hidden="true">
+      <use href="#leafR" transform="translate(2,24) rotate(-34) scale(.62)"/>
+      <use href="#leafL" transform="translate(38,22) rotate(26) scale(.56)"/>
+      <path d="M20 38 L20 12" stroke="#5E9C3E" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <span><span class="brand__txt">绿野仙踪</span><span class="brand__en">THE WIZARD OF OZ</span></span>
+  </a>
+  <div class="navlinks">
+    <a class="navlink" href="index.html">首页封面</a>
+    <a class="navlink is-active" href="video.html">成片视频</a>
+    <a class="navlink" href="script.html">剧本与字幕</a>
+    <a class="navlink" href="gallery.html">AI素材图库</a>
+  </div>
+  <span class="navdeco" aria-hidden="true"><svg viewBox="0 0 100 40"><use href="#vineH" transform="scale(.2)"/></svg></span>
+</nav>
+
+<div class="drift" id="drift" aria-hidden="true"></div>
+
+<main class="page" id="page">
+
+  <!-- 页面标题区 -->
+  <header class="pagehead">
+    <span class="pagehead__en">Chapter · Film</span>
+    <h1 class="script-title script-title--lg" style="margin:0;">成片视频</h1>
+    <svg class="pagehead__deco" viewBox="0 0 340 16" aria-hidden="true"><use href="#waveRule"/></svg>
+  </header>
+
+  <section class="stage">
+
+    <!-- ============ 视频区：先封面卡，点击后展开播放器 ============ -->
+    <div class="filmwrap paper" id="filmwrap">
+
+      <!-- 装饰：四角藤蔓 + 邮戳 + 干花 -->
+      <svg class="deco deco--tl" style="width:96px" viewBox="0 0 130 120" aria-hidden="true"><use href="#vineSpray" transform="scale(.78)"/></svg>
+      <svg class="deco deco--tr" style="width:96px" viewBox="0 0 130 120" aria-hidden="true"><use href="#vineSpray" transform="scale(-.78,.78) translate(-118,0)"/></svg>
+      <svg class="stamp" style="right:-14px;bottom:-10px;width:96px" viewBox="0 0 124 124" aria-hidden="true"><use href="#stampOZ"/></svg>
+      <svg class="dryflower" style="left:-16px;bottom:14px" viewBox="-16 -16 32 32" aria-hidden="true"><use href="#daisy"/></svg>
+
+      <!-- 初始封面卡（点击展开） -->
+      <div class="filmcover" id="filmcover" role="button" tabindex="0" aria-label="点击播放成片视频">
+        <div class="filmcover__inner">
+          <!-- ★ 视频封面图：替换 images/cover.jpg 即可 -->
+          <img class="filmcover__img" src="images/cover.jpg" alt="《绿野仙踪》成片视频 封面">
+          <span class="filmcover__veil" aria-hidden="true"></span>
+          <svg class="filmcover__play" viewBox="0 0 120 120" aria-hidden="true"><use href="#playBtn"/></svg>
+          <span class="filmcover__label">点击播放 ｜ 成片 2 分 03 秒</span>
+        </div>
+      </div>
+
+      <!-- 展开后的播放器（★ 视频文件：video/film.mp4，换成你自己的成片即可） -->
+      <div class="filmplayer paper paper--cream" id="filmplayer">
+        <div class="filmplayer__frame">
+          <video id="filmvideo" controls playsinline preload="metadata"
+                 poster="images/cover.jpg">
+            <source src="video/film.mp4" type="video/mp4">
+            你的浏览器不支持 HTML5 视频，请下载 video/film.mp4 观看。
+          </video>
+        </div>
+        <!-- 播放器四角藤蔓 -->
+        <svg class="filmplayer__corner tl" viewBox="0 0 130 120" aria-hidden="true"><use href="#vineSpray" transform="scale(.82)"/></svg>
+        <svg class="filmplayer__corner tr" viewBox="0 0 130 120" aria-hidden="true"><use href="#vineSpray" transform="scale(.82)"/></svg>
+        <svg class="filmplayer__corner bl" viewBox="0 0 130 120" aria-hidden="true"><use href="#vineSpray" transform="scale(.82)"/></svg>
+        <svg class="filmplayer__corner br" viewBox="0 0 130 120" aria-hidden="true"><use href="#vineSpray" transform="scale(.82)"/></svg>
+      </div>
+
+      <!-- 展开提示 -->
+      <p class="filmwrap__hint" id="filmhint">点击上方封面 ｜ 播放完整成片</p>
+    </div>
+
+    <!-- ============ 章节时间轴（完整视频内的 8 个镜头） ============ -->
+    <div class="chapters reveal">
+      <div class="banner"><span class="banner__text">镜 头 索 引</span></div>
+      <div class="chapters__list" id="chapters" style="margin-top:16px;">
+        <button class="chip" type="button" data-t="0">   <span class="chip__t">00:00</span> 开场·黄砖路</button>
+        <button class="chip" type="button" data-t="15">  <span class="chip__t">00:15</span> 稻草人</button>
+        <button class="chip" type="button" data-t="30">  <span class="chip__t">00:30</span> 铁皮人</button>
+        <button class="chip" type="button" data-t="45">  <span class="chip__t">00:45</span> 胆小狮子</button>
+        <button class="chip" type="button" data-t="60">  <span class="chip__t">01:00</span> 同行上路</button>
+        <button class="chip" type="button" data-t="75">  <span class="chip__t">01:15</span> 抵达翡翠城</button>
+        <button class="chip" type="button" data-t="90">  <span class="chip__t">01:30</span> 帘幕揭开</button>
+        <button class="chip" type="button" data-t="105"> <span class="chip__t">01:45</span> 走向银径</button>
+      </div>
+      <p class="chapters__tip">※ 点击任一时间码可跳转到成片中的对应镜头</p>
+    </div>
+
+    <!-- ============ 项目简介（默认折叠） ============ -->
+    <div class="fold paper paper--cream reveal" id="fold">
+      <div class="fold__head" role="button" tabindex="0" aria-expanded="false">
+        <span class="fold__t">项 目 简 介</span>
+        <svg class="fold__arrow" viewBox="0 0 22 21" aria-hidden="true"><use href="#chevD"/></svg>
+      </div>
+      <div class="fold__body">
+        <div class="fold__inner">
+          <div class="fold__content">
+            <p>本片以世界名著《绿野仙踪》为蓝本，围绕一句提问展开叙事：<br>
+              「稻草人要大脑、铁皮人要心脏、狮子要勇气 —— 而你缺什么？」</p>
+            <p>全片按原著章节顺序推进：从堪萨斯的灰暗草原出发，沿黄砖路依次遇见稻草人、铁皮人与胆小的狮子，
+              抵达翡翠城，揭开幕布后那个手忙脚乱的「大骗子」奥兹，
+              最后回到「他们想要的东西其实一直都在」这一层反转。</p>
+            <p>创作流程为：标题策划 → 字幕脚本（按原著 24 章拆分）→ 分镜画面提示词 →
+              AI 水彩概念图生成 → 首尾帧视频生成 → 剪辑合成 → 网页成果集呈现。
+              全片时长 2 分 03 秒，竖屏 9:16，风格为油画质感的温柔治愈童话。</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- 页面装饰：底部横向藤蔓 -->
+    <div style="position:relative;margin-top:clamp(26px,4vw,46px);text-align:center;">
+      <svg style="display:block;width:min(520px,92%);height:34px;margin:0 auto;opacity:.85;" viewBox="0 0 500 36" aria-hidden="true"><use href="#vineH"/></svg>
+    </div>
+  </section>
+</main>
+
+<div class="signature">项目制作：<span class="signature__name">陈佳怡</span></div>
+<div class="footsign">绿野仙踪 · 新媒体创作项目成果展示 &nbsp;|&nbsp; 制作：<span>陈佳怡</span></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>

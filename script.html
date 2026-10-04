@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>剧本与字幕 · 绿野仙踪 | 陈佳怡</title>
+<meta name="description" content="《绿野仙踪》新媒体创作项目 —— 八个分镜头剧本与逐句字幕稿。制作：陈佳怡。">
+<meta name="theme-color" content="#E7F2DC">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- 入场遮罩：进入网页时纸张洇开 -->
+<div class="intro" aria-hidden="true"></div>
+
+<svg class="svg-defs" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+  <defs>
+    <linearGradient id="gLeaf" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#AED88A"/><stop offset="52%" stop-color="#7CB356"/><stop offset="100%" stop-color="#568F3A"/>
+    </linearGradient>
+    <linearGradient id="gLeaf2" x1="0" y1="1" x2="1" y2="0">
+      <stop offset="0%" stop-color="#8FC064"/><stop offset="100%" stop-color="#4A7C36"/>
+    </linearGradient>
+    <linearGradient id="gTea" x1="0" y1="0" x2=".4" y2="1">
+      <stop offset="0%" stop-color="#A9D287"/><stop offset="45%" stop-color="#78B053"/><stop offset="100%" stop-color="#3F7030"/>
+    </linearGradient>
+
+    <filter id="tornEdge" x="-12%" y="-18%" width="124%" height="136%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.020 0.040" numOctaves="5" seed="11" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="11" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="tornEdge2" x="-12%" y="-18%" width="124%" height="136%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.024 0.048" numOctaves="5" seed="27" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="10" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="tornEdge3" x="-14%" y="-20%" width="128%" height="140%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.030 0.055" numOctaves="4" seed="43" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="8" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+    <filter id="tornEdge4" x="-4%" y="-40%" width="108%" height="180%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.006 0.090" numOctaves="4" seed="59" result="n"/>
+      <feDisplacementMap in="SourceGraphic" in2="n" scale="7" xChannelSelector="R" yChannelSelector="G"/>
+    </filter>
+
+    <g id="leafR">
+      <path d="M0 0 C 9 -11, 26 -14, 36 -3 C 25 8, 8 10, 0 0 Z" fill="url(#gLeaf)"/>
+      <path d="M3 -1 C 13 -3, 25 -6, 34 -4" stroke="#456F32" stroke-width="1.1" fill="none" opacity=".62"/>
+      <path d="M13 -5 L10 0 M19 -6 L16 -2 M25 -6 L23 -3" stroke="#456F32" stroke-width=".75" opacity=".45"/>
+    </g>
+    <g id="leafL">
+      <path d="M0 0 C -9 -11, -26 -14, -36 -3 C -25 8, -8 10, 0 0 Z" fill="url(#gLeaf2)"/>
+      <path d="M-3 -1 C -13 -3, -25 -6, -34 -4" stroke="#456F32" stroke-width="1.1" fill="none" opacity=".62"/>
+    </g>
+    <g id="vineSpray">
+      <path d="M4 104 C 12 72, 28 44, 56 22 C 74 8, 92 2, 110 3" fill="none" stroke="#5E9C3E" stroke-width="2.3" stroke-linecap="round"/>
+      <path d="M34 60 C 46 58, 60 62, 68 70" fill="none" stroke="#5E9C3E" stroke-width="1.6" stroke-linecap="round"/>
+      <use href="#leafR" transform="translate(14,78) rotate(-54) scale(.82)"/>
+      <use href="#leafR" transform="translate(27,56) rotate(-40) scale(.92)"/>
+      <use href="#leafR" transform="translate(43,37) rotate(-26) scale(1)"/>
+      <use href="#leafR" transform="translate(62,22) rotate(-14) scale(.9)"/>
+      <use href="#leafR" transform="translate(86,11) rotate(-5) scale(.78)"/>
+      <use href="#leafL" transform="translate(24,86) rotate(28) scale(.76)"/>
+      <use href="#leafL" transform="translate(38,66) rotate(16) scale(.84)"/>
+      <use href="#leafL" transform="translate(66,70) rotate(34) scale(.7)"/>
+      <circle cx="52" cy="46" r="3.2" fill="#CFE7B4"/>
+      <circle cx="79" cy="30" r="2.6" fill="#CFE7B4"/>
+    </g>
+    <g id="vineH">
+      <path d="M4 26 C 56 6, 116 42, 172 20 C 224 2, 282 30, 336 14 C 388 0, 442 24, 496 10" fill="none" stroke="#6FA84A" stroke-width="2" stroke-linecap="round" opacity=".92"/>
+      <use href="#leafR" transform="translate(40,18) rotate(-30) scale(.6)"/>
+      <use href="#leafL" transform="translate(84,26) rotate(34) scale(.55)"/>
+      <use href="#leafR" transform="translate(140,16) rotate(-22) scale(.62)"/>
+      <use href="#leafL" transform="translate(196,26) rotate(30) scale(.52)"/>
+      <use href="#leafR" transform="translate(248,14) rotate(-26) scale(.6)"/>
+      <use href="#leafL" transform="translate(304,24) rotate(32) scale(.56)"/>
+      <use href="#leafR" transform="translate(366,12) rotate(-20) scale(.58)"/>
+      <use href="#leafL" transform="translate(428,22) rotate(28) scale(.5)"/>
+      <circle cx="112" cy="30" r="3.4" fill="#CFE7B4"/>
+      <circle cx="272" cy="16" r="3" fill="#CFE7B4"/>
+      <circle cx="396" cy="20" r="3.2" fill="#CFE7B4"/>
+    </g>
+    <g id="daisy">
+      <g fill="#FDFCF6" stroke="#B7CE9C" stroke-width="1">
+        <ellipse cx="0" cy="-9" rx="3.6" ry="7"/><ellipse cx="0" cy="9" rx="3.6" ry="7"/>
+        <ellipse cx="-9" cy="0" rx="7" ry="3.6"/><ellipse cx="9" cy="0" rx="7" ry="3.6"/>
+        <ellipse cx="-6.4" cy="-6.4" rx="3.2" ry="6.2" transform="rotate(-45 -6.4 -6.4)"/>
+        <ellipse cx="6.4" cy="6.4" rx="3.2" ry="6.2" transform="rotate(-45 6.4 6.4)"/>
+        <ellipse cx="-6.4" cy="6.4" rx="3.2" ry="6.2" transform="rotate(45 -6.4 6.4)"/>
+        <ellipse cx="6.4" cy="-6.4" rx="3.2" ry="6.2" transform="rotate(45 6.4 -6.4)"/>
+      </g>
+      <circle cx="0" cy="0" r="3.4" fill="#E8C25C"/>
+    </g>
+    <g id="stampOZ">
+      <circle cx="62" cy="62" r="55" fill="none" stroke="#9C9078" stroke-width="1.7" opacity=".85"/>
+      <circle cx="62" cy="62" r="47" fill="none" stroke="#9C9078" stroke-width="1" opacity=".72" stroke-dasharray="2.5 4"/>
+      <path d="M62 30 L75 54 L49 54 Z" fill="none" stroke="#9C9078" stroke-width="1.5" opacity=".9"/>
+      <path d="M62 30 L62 21" stroke="#9C9078" stroke-width="1.3" opacity=".9"/>
+      <path d="M52 54 L72 54" stroke="#9C9078" stroke-width="1.3" opacity=".9"/>
+      <text x="62" y="76" text-anchor="middle" font-family="Georgia,serif" font-size="15" letter-spacing="2" fill="#9C9078" opacity=".95">OZ</text>
+      <text x="62" y="90" text-anchor="middle" font-family="Georgia,serif" font-size="7.5" letter-spacing="1.2" fill="#9C9078" opacity=".85">1900 · EMERALD CITY</text>
+    </g>
+    <g id="butterfly">
+      <path d="M16 18 C 3 3, -8 10, 1 20 C -8 29, 3 36, 16 22 Z" fill="#BAD89C"/>
+      <path d="M18 18 C 31 3, 42 10, 33 20 C 42 29, 31 36, 18 22 Z" fill="#A8D283"/>
+      <ellipse cx="17" cy="20" rx="1.7" ry="7.4" fill="#3F7030"/>
+      <path d="M17 13 C 14 5, 10 2, 7 1 M17 13 C 20 5, 24 2, 27 1" stroke="#3F7030" stroke-width="1" fill="none"/>
+    </g>
+    <g id="chev"><path d="M5 4 L13 12 L5 20" fill="none" stroke="#5E9C3E" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="chevD"><path d="M3 6 L11 15 L19 6" fill="none" stroke="#5E9C3E" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/></g>
+    <g id="waveRule"><path d="M6 8 C 60 2, 120 12, 170 6 S 270 3, 334 8" fill="none" stroke="#8FC064" stroke-width="2.2" stroke-linecap="round"/></g>
+    <g id="tinyLeaf"><path d="M0 0 C 6 -8, 18 -10, 24 -2 C 16 6, 6 8, 0 0 Z" fill="#8FC064" opacity=".85"/></g>
+  </defs>
+</svg>
+
+<nav class="topnav">
+  <a class="brand" href="index.html">
+    <svg class="brand__leaf" viewBox="0 0 40 40" aria-hidden="true">
+      <use href="#leafR" transform="translate(2,24) rotate(-34) scale(.62)"/>
+      <use href="#leafL" transform="translate(38,22) rotate(26) scale(.56)"/>
+      <path d="M20 38 L20 12" stroke="#5E9C3E" stroke-width="1.8" stroke-linecap="round"/>
+    </svg>
+    <span><span class="brand__txt">绿野仙踪</span><span class="brand__en">THE WIZARD OF OZ</span></span>
+  </a>
+  <div class="navlinks">
+    <a class="navlink" href="index.html">首页封面</a>
+    <a class="navlink" href="video.html">成片视频</a>
+    <a class="navlink is-active" href="script.html">剧本与字幕</a>
+    <a class="navlink" href="gallery.html">AI素材图库</a>
+  </div>
+  <span class="navdeco" aria-hidden="true"><svg viewBox="0 0 100 40"><use href="#vineH" transform="scale(.2)"/></svg></span>
+</nav>
+
+<div class="drift" id="drift" aria-hidden="true"></div>
+
+<main class="page" id="page">
+
+  <header class="pagehead">
+    <span class="pagehead__en">Chapter · Script</span>
+    <h1 class="script-title script-title--lg" style="margin:0;">剧本与字幕</h1>
+    <svg class="pagehead__deco" viewBox="0 0 340 16" aria-hidden="true"><use href="#waveRule"/></svg>
+    <p class="muted small" style="max-width:640px;margin:14px auto 0;">
+      按原著章节顺次推进 · 8 个分镜头 × 15 秒 = 2 分 00 秒 · 全稿约 400 字，语速约 3.3 字／秒
+    </p>
+  </header>
+
+  <section class="scriptwrap">
+
+    <!-- ==========================================================
+         分组一：分镜头剧本（点击牛皮纸横幅整体展开 / 收起）
+         ========================================================== -->
+    <div class="group is-open" id="group1">
+      <div class="banner banner--click group__banner" role="button" tabindex="0" aria-expanded="true">
+        <svg class="group__ico" viewBox="0 0 68 70" aria-hidden="true"><use href="#icoQuill"/></svg>
+        <span class="banner__text">分 镜 头 剧 本</span>
+        <svg class="fold__arrow" viewBox="0 0 22 21" aria-hidden="true"><use href="#chevD"/></svg>
+      </div>
+
+      <div class="group__body">
+        <div class="group__inner">
+          <p class="muted small center" style="margin:0 0 18px;">※ 点击单张便签可展开 / 收回完整内容</p>
+
+          <div class="notes">
+
+            <!-- ★ 镜头一 -->
+            <article class="note">
+              <span class="tape tape--tc" aria-hidden="true"></span>
+              <div class="note__head">
+                <span class="note__no">一</span>
+                <span class="note__t">开场 · 出发</span>
+                <svg class="note__arrow" viewBox="0 0 22 21" aria-hidden="true"><use href="#chevD"/></svg>
+              </div>
+              <p class="note__meta">00:00 – 00:15 ｜ 首帧 p0 → 尾帧 p1 ｜ 平稳缓推</p>
+              <p class="note__brief">女孩站在农舍门口远眺黄砖路，镜头穿过门框向前推进，画面由灰蓝渐变为暖粉云海。</p>
+              <div class="note__body">
+                <div class="note__bodyin">
+                  <div class="note__content">
+                    <p class="note__row"><span class="note__k">画面</span><span class="note__v">镜头从农舍门口的女孩身后缓缓向前推进，穿过门框，黄砖路在脚下延伸展开，画面由灰蓝渐变为暖粉云海，光点如萤火般浮现，最后落到花海中并肩前行的四人背影。</span></p>
+                    <p class="note__row"><span class="note__k">运镜</span><span class="note__v">平稳缓推，节奏抒情，光影温柔流动。</span></p>
+                    <p class="note__row"><span class="note__k">字幕</span><span class="note__v">如果让你许一个愿，你会要什么？大脑、心脏，还是勇气？1900 年，美国作家鲍姆写下《绿野仙踪》，让三个奇怪的伙伴，踏上了黄砖路。</span></p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ★ 镜头二 -->
+            <article class="note">
+              <span class="tape tape--tc" aria-hidden="true"></span>
+              <div class="note__head">
+                <span class="note__no">二</span>
+                <span class="note__t">稻草人</span>
+                <svg class="note__arrow" viewBox="0 0 22 21" aria-hidden="true"><use href="#chevD"/></svg>
+              </div>
+              <p class="note__meta">00:15 – 00:30 ｜ p1 → c1 ｜ 平移加推近 ｜ 原著第 3 章</p>
+              <p class="note__brief">镜头越过队伍落在稻草人身上，稻草与麻布在柔光里轻轻颤动，背景虚化成朦胧暖绿。</p>
+              <div class="note__body">
+                <div class="note__bodyin">
+                  <div class="note__content">
+                    <p class="note__row"><span class="note__k">画面</span><span class="note__v">镜头从四人身侧缓缓平移并推近，越过队伍落在稻草人身上，稻草与麻布在柔光里轻轻颤动，背景虚化成朦胧暖绿，光点缓缓升起。</span></p>
+                    <p class="note__row"><span class="note__k">运镜</span><span class="note__v">平移加推近，温柔聚焦。</span></p>
+                    <p class="note__row"><span class="note__k">字幕</span><span class="note__v">他们各自要去讨一份东西。稻草人觉得自己没有脑子，所以一定很蠢，于是他一心要去翡翠城，换一副聪明的脑袋。他连风都怕，把自己吹散。</span></p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ★ 镜头三 -->
+            <article class="note">
+              <span class="tape tape--tc" aria-hidden="true"></span>
+              <div class="note__head">
+                <span class="note__no">三</span>
+                <span class="note__t">铁皮人</span>
+                <svg class="note__arrow" viewBox="0 0 22 21" aria-hidden="true"><use href="#chevD"/></svg>
+              </div>
+              <p class="note__meta">00:30 – 00:45 ｜ c1 → c2 ｜ 平稳横移 ｜ 原著第 5 章</p>
+              <p class="note__brief">画面平滑过渡到铁皮人，金属表面反射流动暖光，胸前心形浮雕缓缓亮起。</p>
+              <div class="note__body">
+                <div class="note__bodyin">
+                  <div class="note__content">
+                    <p class="note__row"><span class="note__k">画面</span><span class="note__v">镜头从稻草人平稳横移，光晕连成一片，画面平滑过渡到铁皮人，金属表面反射流动暖光，胸前心形浮雕缓缓亮起，铆钉细节逐渐清晰。</span></p>
+                    <p class="note__row"><span class="note__k">运镜</span><span class="note__v">横移，光影流转。</span></p>
+                    <p class="note__row"><span class="note__k">字幕</span><span class="note__v">铁皮人没有心。他认定自己不能去爱，也不会受伤。可他想要一颗心——一颗会跳动、会疼、会为别人落泪的心。</span></p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ★ 镜头四 -->
+            <article class="note">
+              <span class="tape tape--tc" aria-hidden="true"></span>
+              <div class="note__head">
+                <span class="note__no">四</span>
+                <span class="note__t">胆小狮子</span>
+                <svg class="note__arrow" viewBox="0 0 22 21" aria-hidden="true"><use href="#chevD"/></svg>
+              </div>
+              <p class="note__meta">00:45 – 01:00 ｜ c2 → c3 ｜ 横移 ｜ 原著第 6 章</p>
+              <p class="note__brief">画面过渡到狮子，金棕色鬃毛在风中轻轻飘扬，光点飞舞，温润的眼神充满画面。</p>
+              <div class="note__body">
+                <div class="note__bodyin">
+                  <div class="note__content">
+                    <p class="note__row"><span class="note__k">画面</span><span class="note__v">镜头从铁皮人继续横移，柔光相连，画面过渡到狮子，金棕色鬃毛在风中轻轻飘扬，光点飞舞，温润的眼神渐渐充满画面。</span></p>
+                    <p class="note__row"><span class="note__k">运镜</span><span class="note__v">横移，毛发微动。</span></p>
+                    <p class="note__row"><span class="note__k">字幕</span><span class="note__v">狮子说，自己没有勇气，连自己的影子，他都害怕。他一心想要一份胆量，好让自己，再也不用发抖。哪怕只是一点点，也好。</span></p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ★ 镜头五 -->
+            <article class="note">
+              <span class="tape tape--tc" aria-hidden="true"></span>
+              <div class="note__head">
+                <span class="note__no">五</span>
+                <span class="note__t">回到队伍</span>
+                <svg class="note__arrow" viewBox="0 0 22 21" aria-hidden="true"><use href="#chevD"/></svg>
+              </div>
+              <p class="note__meta">01:00 – 01:15 ｜ c3 → p1 ｜ 缓缓拉远 ｜ 原著第 3 / 5 / 6 章</p>
+              <p class="note__brief">镜头从狮子面部后退拉远，四人队伍重新出现在草甸与黄砖路上，暖橘夕阳洒落。</p>
+              <div class="note__body">
+                <div class="note__bodyin">
+                  <div class="note__content">
+                    <p class="note__row"><span class="note__k">画面</span><span class="note__v">镜头从狮子面部缓缓后退拉远，鬃毛边缘的光晕逐渐散开，四人队伍重新出现在草甸与黄砖路上，暖橘夕阳洒落。</span></p>
+                    <p class="note__row"><span class="note__k">运镜</span><span class="note__v">拉远，回到群像。本段三连排比句可稍加速，到「是那头狮子」骤然放慢。</span></p>
+                    <p class="note__row"><span class="note__k">字幕</span><span class="note__v">可你翻翻书——这一路上出主意的，是稻草人；为同伴落泪的，是铁皮人；冲在最前面挡危险的，是那头狮子。</span></p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ★ 镜头六 -->
+            <article class="note">
+              <span class="tape tape--tc" aria-hidden="true"></span>
+              <div class="note__head">
+                <span class="note__no">六</span>
+                <span class="note__t">抵达翡翠城</span>
+                <svg class="note__arrow" viewBox="0 0 22 21" aria-hidden="true"><use href="#chevD"/></svg>
+              </div>
+              <p class="note__meta">01:15 – 01:30 ｜ p1 → p2 ｜ 前推转场 ｜ 原著第 11 章</p>
+              <p class="note__brief">远方翡翠城的绿色轮廓逐渐变大变清晰，天空由暖橘过渡为朦胧绿光，画面进入翡翠城大厅。</p>
+              <div class="note__body">
+                <div class="note__bodyin">
+                  <div class="note__content">
+                    <p class="note__row"><span class="note__k">画面</span><span class="note__v">镜头跟随四人背影向前推进，远方翡翠城的绿色轮廓逐渐变大变清晰，天空由暖橘过渡为朦胧绿光，最终画面进入翡翠城大厅。</span></p>
+                    <p class="note__row"><span class="note__k">运镜</span><span class="note__v">前推，场景转换。</span></p>
+                    <p class="note__row"><span class="note__k">字幕</span><span class="note__v">他们终于走到了翡翠城，见到了伟大的奥兹。奥兹答应给稻草人脑子、给铁皮人心、给狮子勇气，一人一份。他说，他会给他们想要的一切。</span></p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ★ 镜头七 -->
+            <article class="note">
+              <span class="tape tape--tc" aria-hidden="true"></span>
+              <div class="note__head">
+                <span class="note__no">七</span>
+                <span class="note__t">帘幕揭开</span>
+                <svg class="note__arrow" viewBox="0 0 22 21" aria-hidden="true"><use href="#chevD"/></svg>
+              </div>
+              <p class="note__meta">01:30 – 01:45 ｜ p2 → p3 ｜ 大厅平移 ｜ 原著第 15 / 16 章</p>
+              <p class="note__brief">帘幕被掀开后，画面渐渐化为三人并立发光的朦胧暖色空间。</p>
+              <div class="note__body">
+                <div class="note__bodyin">
+                  <div class="note__content">
+                    <p class="note__row"><span class="note__k">画面</span><span class="note__v">镜头在翡翠城大厅内缓缓平移，绿色穹顶与立柱的光晕流动，帘幕被掀开后，画面渐渐化为三人并立发光的朦胧暖色空间。</span></p>
+                    <p class="note__row"><span class="note__k">运镜</span><span class="note__v">平移，梦幻过渡。</span></p>
+                    <p class="note__row"><span class="note__k">字幕</span><span class="note__v">可帘幕被掀开，奥兹只是个普通老头，连魔法，都是骗来的。那些礼物，不过是一场精心包装的戏法。</span></p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+            <!-- ★ 镜头八 -->
+            <article class="note">
+              <span class="tape tape--tc" aria-hidden="true"></span>
+              <div class="note__head">
+                <span class="note__no">八</span>
+                <span class="note__t">走向银径</span>
+                <svg class="note__arrow" viewBox="0 0 22 21" aria-hidden="true"><use href="#chevD"/></svg>
+              </div>
+              <p class="note__meta">01:45 – 02:00 ｜ p3 → p4 ｜ 下沉收尾 ｜ 原著第 16 / 24 章</p>
+              <p class="note__brief">暖光化为银白色柔光小径，旧皮靴踏在发光银尘上，萤火光点缓缓升起，安静收尾。</p>
+              <div class="note__body">
+                <div class="note__bodyin">
+                  <div class="note__content">
+                    <p class="note__row"><span class="note__k">画面</span><span class="note__v">镜头从三人群像缓缓向下沉，暖光渐渐化为银白色的柔光小径，一双旧皮靴轻轻踏在发光的银尘上，萤火般的光点缓缓升起，安静收尾。</span></p>
+                    <p class="note__row"><span class="note__k">运镜</span><span class="note__v">下沉，色调转银。结尾最后两句叠轻柔 BGM，留 2 秒黑场再出定格字幕。</span></p>
+                    <p class="note__row"><span class="note__k">字幕</span><span class="note__v">奇怪的是，拿到礼物之后，他们真的变聪明、变温柔、变勇敢了。原来他们要的东西，从头到尾，都长在自己身上。而你，缺的又是什么？<br><b>（定格字幕：你本来就有）</b></span></p>
+                  </div>
+                </div>
+              </div>
+            </article>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ==========================================================
+         分组二：逐句字幕（可折叠）
+         ========================================================== -->
+    <div class="group is-open" id="group2">
+      <div class="banner banner--click group__banner" role="button" tabindex="0" aria-expanded="true">
+        <svg class="group__ico" viewBox="0 0 68 70" aria-hidden="true"><use href="#icoFilm"/></svg>
+        <span class="banner__text">逐 句 字 幕</span>
+        <svg class="fold__arrow" viewBox="0 0 22 21" aria-hidden="true"><use href="#chevD"/></svg>
+      </div>
+
+      <div class="group__body">
+        <div class="group__inner">
+
+          <!-- 字幕大信纸（★ 替换字幕文字：改下面每一条 .subline） -->
+          <div class="subsheet paper">
+            <span class="tape tape--tc" aria-hidden="true"></span>
+            <svg class="stamp" style="right:-12px;top:-6px;width:92px" viewBox="0 0 124 124" aria-hidden="true"><use href="#stampOZ"/></svg>
+            <svg class="dryflower" style="left:-14px;bottom:16px" viewBox="-16 -16 32 32" aria-hidden="true"><use href="#daisy"/></svg>
+
+            <div class="subsheet__hd">
+              <h3>解 说 字 幕 稿</h3>
+              <p>全稿约 400 字 ｜ 语速约 3.3 字／秒 ｜ 总时长 2 分 00 秒</p>
+              <div class="subsheet__rule" aria-hidden="true"></div>
+            </div>
+
+            <!-- 01 -->
+            <div class="subline">
+              <span class="subline__time">00:00<br>00:15</span>
+              <div class="subline__txt">
+                <span class="subline__role">01 ｜ 开场 · 出发</span><br>
+                如果让你许一个愿，你会要什么？<br>
+                大脑、心脏，还是勇气？<br>
+                1900 年，美国作家鲍姆写下《绿野仙踪》，<br>
+                让三个奇怪的伙伴，踏上了黄砖路。
+              </div>
+            </div>
+
+            <!-- 02 -->
+            <div class="subline">
+              <span class="subline__time">00:15<br>00:30</span>
+              <div class="subline__txt">
+                <span class="subline__role">02 ｜ 稻草人 ｜ 原著第 3 章</span><br>
+                他们各自要去讨一份东西。<br>
+                稻草人觉得自己没有脑子，所以一定很蠢，<br>
+                于是他一心要去翡翠城，<br>
+                换一副聪明的脑袋。<br>
+                他连风都怕，把自己吹散。
+              </div>
+            </div>
+
+            <!-- 03 -->
+            <div class="subline">
+              <span class="subline__time">00:30<br>00:45</span>
+              <div class="subline__txt">
+                <span class="subline__role">03 ｜ 铁皮人 ｜ 原著第 5 章</span><br>
+                铁皮人没有心。<br>
+                他认定自己不能去爱，也不会受伤。<br>
+                可他想要一颗心——<br>
+                一颗会跳动、会疼、会为别人落泪的心。
+              </div>
+            </div>
+
+            <!-- 04 -->
+            <div class="subline">
+              <span class="subline__time">00:45<br>01:00</span>
+              <div class="subline__txt">
+                <span class="subline__role">04 ｜ 胆小狮子 ｜ 原著第 6 章</span><br>
+                狮子说，自己没有勇气，<br>
+                连自己的影子，他都害怕。<br>
+                他一心想要一份胆量，<br>
+                好让自己，再也不用发抖。<br>
+                哪怕只是一点点，也好。
+              </div>
+            </div>
+
+            <!-- 05 -->
+            <div class="subline">
+              <span class="subline__time">01:00<br>01:15</span>
+              <div class="subline__txt">
+                <span class="subline__role">05 ｜ 回到队伍 ｜ 原著第 3 / 5 / 6 章</span><br>
+                可你翻翻书——<br>
+                这一路上出主意的，是稻草人；<br>
+                为同伴落泪的，是铁皮人；<br>
+                冲在最前面挡危险的，是那头狮子。
+              </div>
+            </div>
+
+            <!-- 06 -->
+            <div class="subline">
+              <span class="subline__time">01:15<br>01:30</span>
+              <div class="subline__txt">
+                <span class="subline__role">06 ｜ 抵达翡翠城 ｜ 原著第 11 章</span><br>
+                他们终于走到了翡翠城，<br>
+                见到了伟大的奥兹。<br>
+                奥兹答应给稻草人脑子、给铁皮人心、<br>
+                给狮子勇气，一人一份。<br>
+                他说，他会给他们想要的一切。
+              </div>
+            </div>
+
+            <!-- 07 -->
+            <div class="subline">
+              <span class="subline__time">01:30<br>01:45</span>
+              <div class="subline__txt">
+                <span class="subline__role">07 ｜ 帘幕揭开 ｜ 原著第 15 / 16 章</span><br>
+                可帘幕被掀开，<br>
+                奥兹只是个普通老头，<br>
+                连魔法，都是骗来的。<br>
+                那些礼物，不过是一场精心包装的戏法。
+              </div>
+            </div>
+
+            <!-- 08 -->
+            <div class="subline">
+              <span class="subline__time">01:45<br>02:00</span>
+              <div class="subline__txt">
+                <span class="subline__role">08 ｜ 走向银径 ｜ 原著第 16 / 24 章</span><br>
+                奇怪的是，拿到礼物之后，<br>
+                他们真的变聪明、变温柔、变勇敢了。<br>
+                原来他们要的东西，<br>
+                从头到尾，都长在自己身上。<br>
+                而你，缺的又是什么？<br>
+                <b style="color:#3F7030;">（定格字幕：你本来就有）</b>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- 配音节奏提示便签 -->
+          <div class="paper paper--tight" style="max-width:880px;margin:clamp(22px,3vw,34px) auto 0;">
+            <p class="hand" style="font-size:19px;margin:0 0 8px;">配 音 节 奏 提 示</p>
+            <p class="muted small" style="margin:0;">全程语速偏慢、留白多，每句后 0.3–0.5 秒停顿，每段旁白控制在 15 秒内。
+              第 05 段三连排比（稻草人 / 铁皮人 / 狮子）可稍加速，到「是那头狮子」骤然放慢。
+              第 08 段最后两句叠轻柔 BGM，留出 2 秒黑场再出定格字幕「你本来就有」。</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- 页面装饰 -->
+    <div style="position:relative;margin-top:clamp(26px,4vw,46px);text-align:center;">
+      <svg style="display:block;width:min(520px,92%);height:34px;margin:0 auto;opacity:.85;" viewBox="0 0 500 36" aria-hidden="true"><use href="#vineH"/></svg>
+    </div>
+  </section>
+</main>
+
+<div class="signature">项目制作：<span class="signature__name">陈佳怡</span></div>
+<div class="footsign">绿野仙踪 · 新媒体创作项目成果展示 &nbsp;|&nbsp; 制作：<span>陈佳怡</span></div>
+
+<script src="js/main.js"></script>
+</body>
+</html>
